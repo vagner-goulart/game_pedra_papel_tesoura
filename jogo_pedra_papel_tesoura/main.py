@@ -7,12 +7,18 @@ def validar_jogada_do_usuario():
   
   global jogada_do_usuario
   
-  while not type(jogada_do_usuario) == int: 
+  while True: 
     try:
+
       jogada_do_usuario = int(jogada_do_usuario)
+
+      if jogada_do_usuario == 0 or jogada_do_usuario > 4:
+        raise ValueError
+
       break
+      
     except:
-      print("\nDigite um dos valores abaixo pfv\n")
+      print("\nSe atenha APENAS aos valores dos enunciados!\n")
       jogada_do_usuario = input("Para sair digite 4\nEscolha pedra (1), papel (2) ou tesoura (3): ")
   print()
 
