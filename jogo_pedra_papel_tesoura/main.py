@@ -12,7 +12,7 @@ def validar_jogada_do_usuario():
 
       jogada_do_usuario = int(jogada_do_usuario)
 
-      if jogada_do_usuario == 0 or jogada_do_usuario > 4:
+      if jogada_do_usuario <= 0 or jogada_do_usuario > 4:
         raise ValueError
 
       break
